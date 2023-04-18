@@ -57,7 +57,16 @@ public class MyArrayList<T> implements MyArray{
 
     @Override
     public void add(Object item, int index) {
-
+        if (size == arr.length){
+            increaseBuffer();
+        }
+        if(index - size > 1){
+            System.out.println("Size limit");
+        }
+        if(index - size == 1){
+            size++;
+        }
+        arr[index] = (T) item;
     }
 
     @Override
