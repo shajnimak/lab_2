@@ -244,5 +244,23 @@ public class MyLinkedList<T> implements MyArray {
         }
         return false;
     }
+    public void returnList() {
+        System.out.print("Doubly Linked List:  ");
+        if (size == 0) {
+            System.out.print("empty\n");
+            return;
+        }
+        if (head.next == null) {
+            System.out.println(head.var);
+            return;
+        }
+        System.out.print(head.var + " <-> ");
+        Node<T> ptr = head.next;
+        while (ptr.next != null) {
+            System.out.print(ptr.var + " <-> ");
+            ptr = ptr.next;
+        }
+        System.out.print(ptr.var + "\n");
+    }
 
 }
