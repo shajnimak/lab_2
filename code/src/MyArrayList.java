@@ -60,9 +60,6 @@ public class MyArrayList<T> implements MyArray{
         if (size == arr.length){
             increaseBuffer();
         }
-        if(index - size > 1){
-            System.out.println("Size limit");
-        }
         if(index - size == 1){
             size++;
         }
