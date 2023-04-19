@@ -168,7 +168,18 @@ public class MyLinkedList<T> implements MyArray {
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        Node<T> newNode = new Node<T>((T) o, null, null);
+        if (head.var == newNode.var) {
+            return 0;
+        }
+        Node<T> ptr = head.next;
+        for (int i = 1; i <= size; i++) {
+            if (ptr.var == newNode.var) {
+                return i;
+            }
+            ptr = ptr.next;
+        }
+        return -1;
     }
 
     @Override
