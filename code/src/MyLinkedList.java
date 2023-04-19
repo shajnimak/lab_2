@@ -59,7 +59,24 @@ public class MyLinkedList<T> implements MyArray {
 
     @Override
     public void add(Object item, int index) {
-
+        checkIndex(index);
+        Node<T> newNode = new Node<T>((T) item, null, null);
+        if (index == 0) {
+            add(item);
+            return;
+        }
+        Node<T> ptr = head;
+        for (int i = 1; i <= size; i++) {
+            if (i == index) {
+                Node<T> temp = ptr.next;
+                ptr.next = newNode;
+                newNode.prev = ptr;
+                newNode.next = temp;
+                temp.prev = newNode;
+            }
+            ptr = ptr.next;
+        }
+        size++;
     }
 
     @Override
