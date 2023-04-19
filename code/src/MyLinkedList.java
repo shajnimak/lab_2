@@ -200,6 +200,18 @@ public class MyLinkedList<T> implements MyArray {
 
     @Override
     public void sort() {
+        if (isTrueForSort()) {
+            Node<T> front = head;
+            Node<T> back = null;
+            while (front != null) {
+                back = front.next;
+                while (back != null && back.prev != null && (Integer)back.var<(Integer)back.prev.var) {
+                    swapValue(back, back.prev);
+                    back = back.prev;
+                }
+                front = front.next;
+            }
+        }
 
     }
     public void swapValue(Node<T> one, Node<T> two) {
