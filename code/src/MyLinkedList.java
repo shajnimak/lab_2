@@ -106,5 +106,25 @@ public class MyLinkedList<T> implements MyArray {
             throw new IndexOutOfBoundsException();
         }
     }
+    public boolean isTrueForSort() {
+        Node<T> header = head;
+        int len = 0;
+        int secondSize = 0;
+        for (int i = 1; i <= size; i++) {
+            try {
+                len++;
+            } catch (ClassCastException e) {
+            }
+            try {
+                secondSize++;
+            } catch (ClassCastException e) {
+            }
+            header = header.next;
+        }
+        if (len==size || secondSize==size || secondSize+len==size) {
+            return true;
+        }
+        return false;
+    }
 
 }
