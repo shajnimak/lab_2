@@ -39,7 +39,7 @@ public class MyArrayList<T> implements MyArray{
 
     @Override
     public boolean contains(Object o) {
-        for(int i = 0; i < arr.length; i++){
+        for(int i = 0; i < size - 1; i++){
             if (arr[i].equals(o)){
                 return true;
             }
@@ -97,7 +97,7 @@ public class MyArrayList<T> implements MyArray{
     @Override
     public int indexOf(Object o) {
         int index = -1;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < size - 1; i++) {
             if (arr[i].equals(o)) {
                 index = i;
                 break;
@@ -118,42 +118,21 @@ public class MyArrayList<T> implements MyArray{
 
     @Override
     public void sort() {
-        Class cls = arr.getClass();
-        if (cls.equals(Integer.TYPE)){
-            boolean isSorted = false;
-            T buf;
-            while(!isSorted) {
-                isSorted = true;
-                for (int i = 0; i < arr.length; i++) {
-                    int x = (int) arr[i];
-                    int y = (int) arr[i+1];
-                    if(x > y){
-                        isSorted = false;
-                        buf = arr[i];
-                        arr[i] = arr[i+1];
-                        arr[i+1] = buf;
-                    }
+        boolean isSorted = false;
+        T buf;
+        while(!isSorted) {
+            isSorted = true;
+            for (int i = 0; i < size - 1; i++) {
+                int x = (int) arr[i];
+                int y = (int) arr[i+1];
+                if(x > y){
+                    isSorted = false;
+                    buf = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = buf;
                 }
             }
         }
-        else if (cls.equals(Character.TYPE)){
-            boolean isSorted = false;
-            T buf;
-            while(!isSorted) {
-                isSorted = true;
-                for (int i = 0; i < arr.length; i++) {
-                    char x = (char) arr[i];
-                    char y = (char) arr[i+1];
-                    if(x > y){
-                        isSorted = false;
-                        buf = arr[i];
-                        arr[i] = arr[i+1];
-                        arr[i+1] = buf;
-                    }
-                }
-            }
-        }
-
     }
 
     public void delete(int index){
