@@ -101,6 +101,10 @@ public class MyLinkedList<T> implements MyArray {
         one.var = two.var;
         two.var = (T) val;
     }
-
+    public void checkIndex(int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
 
 }
