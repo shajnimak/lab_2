@@ -29,6 +29,16 @@ public class MyLinkedList<T> implements MyArray {
 
     @Override
     public boolean contains(Object o) {
+        if (head.var == o) {
+            return true;
+        }
+        Node<T> ptr = head.next;
+        while (ptr != null) {
+            if (ptr.var == o) {
+                return true;
+            }
+            ptr = ptr.next;
+        }
         return false;
     }
 
