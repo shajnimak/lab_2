@@ -96,6 +96,11 @@ public class MyLinkedList<T> implements MyArray {
     public void sort() {
 
     }
+    public void swapValue(Node<T> one, Node<T> two) {
+        Object val = one.var;
+        one.var = two.var;
+        two.var = (T) val;
+    }
 
 
 }
