@@ -184,7 +184,18 @@ public class MyLinkedList<T> implements MyArray {
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        Node<T> newNode = new Node<T>((T) o, null, null);
+        if (tail.var == newNode.var) {
+            return size-1;
+        }
+        Node<T> ptr = tail.prev;
+        for (int i = size-1; i >= 1; i--) {
+            if (ptr.var == newNode.var) {
+                return i;
+            }
+            ptr = ptr.prev;
+        }
+        return -1;
     }
 
     @Override
