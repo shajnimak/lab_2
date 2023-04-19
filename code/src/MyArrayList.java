@@ -77,9 +77,13 @@ public class MyArrayList<T> implements MyArray{
 
     @Override
     public Object remove(int index) {
-        return null;
+        checkIndex(index);
+        for(int i= index + 1; i<size; i++){
+            arr[i-1] = arr[i];
+        }
+        size--;
+        return arr;
     }
-
     public void clear(){
         this.arr = (T[]) new Object[5];
         this.size = 0;
