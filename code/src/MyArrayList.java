@@ -68,7 +68,11 @@ public class MyArrayList<T> implements MyArray{
 
     @Override
     public boolean remove(Object item) {
-        return false;
+        if (!contains(item)){
+            return false;
+        }
+        remove(indexOf(item));
+        return true;
     }
 
     @Override
