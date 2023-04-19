@@ -91,7 +91,7 @@ public class MyArrayList<T> implements MyArray{
 
     @Override
     public Object get(int index) {
-        return null;
+        return arr[index];
     }
 
     @Override
