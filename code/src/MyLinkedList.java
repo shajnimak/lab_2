@@ -44,7 +44,17 @@ public class MyLinkedList<T> implements MyArray {
 
     @Override
     public void add(Object item) {
-
+        Node<T> newNode = new Node<T>((T) item, null, null);
+        if (head == null) {
+            head = newNode;
+            tail = head;
+        }
+        else {
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
     }
 
     @Override
