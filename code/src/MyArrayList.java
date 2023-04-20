@@ -36,7 +36,10 @@ public class MyArrayList<T> implements MyArray{
 //    public int getSize() {
 //        return size;
 //    }
-
+    /**
+     * @size - method finds the size of an array
+     * @return - integer number: size of an array
+     */
     @Override
     public int size() {
         return size;
