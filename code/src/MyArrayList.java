@@ -44,7 +44,10 @@ public class MyArrayList<T> implements MyArray{
     public int size() {
         return size;
     }
-
+    /**
+     * @contains - method to check if an element is in an array
+     * @return - boolean val: true/false
+     */
     @Override
     public boolean contains(Object o) {
         for(int i = 0; i < size - 1; i++){
