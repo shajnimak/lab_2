@@ -145,7 +145,11 @@ public class MyArrayList<T> implements MyArray{
         }
         return index;
     }
-
+    /**
+     * @lastIndexOf - method finds the last index by element
+     * @param - Object element
+     * @return - returns index if element
+     */
     @Override
     public int lastIndexOf(Object o) {
         for (int i = size; i > 0; i--){
@@ -155,7 +159,10 @@ public class MyArrayList<T> implements MyArray{
         }
         return -1;
     }
-
+    /**
+     * @indexOf - method finds the last index by element
+     * @return - returns index if element
+     */
     @Override
     public void sort() {
         boolean isSorted = false;
