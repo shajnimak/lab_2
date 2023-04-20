@@ -182,13 +182,10 @@ public class MyArrayList<T> implements MyArray{
         }
     }
 
-    public void delete(int index){
-        checkIndex(index);
-        for(int i= index + 1; i<size; i++){
-            arr[i-1] = arr[i];
-        }
-        size--;
-    }
+    /**
+     * @checkIndex - Tests the given index within the length of the array
+     * @return - IndexOutOfBoundsException if true
+     */
     public void checkIndex(int index){
         if(index < 0 || index>=size){
             throw new IndexOutOfBoundsException();
