@@ -46,6 +46,7 @@ public class MyArrayList<T> implements MyArray{
     }
     /**
      * @contains - method to check if an element is in an array
+     * @param - Object o (element for check)
      * @return - boolean val: true/false
      */
     @Override
@@ -57,7 +58,11 @@ public class MyArrayList<T> implements MyArray{
         }
         return false;
     }
-
+    /**
+     * @add - method adds an element to the end of the array
+     * @param - Object item (element for adding)
+     * @return - void (updated array)
+     */
     @Override
     public void add(Object item) {
         if (size == arr.length){
