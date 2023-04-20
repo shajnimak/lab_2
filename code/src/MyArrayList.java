@@ -15,6 +15,11 @@ public class MyArrayList<T> implements MyArray{
 //        arr[size++] = element;
 //    }
 //
+
+    /**
+     * @increaseBuffer - method to increase the length of an array by 2 times
+     * @return - void method, but creates a new array with length 2 times and replaces the main array
+     */
     public void increaseBuffer(){
         T[] newArr = (T[]) new Object[arr.length*2];
         for(int i=0; i< arr.length; i++){
