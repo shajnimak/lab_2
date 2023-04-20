@@ -70,7 +70,11 @@ public class MyArrayList<T> implements MyArray{
         }
         arr[size++] = (T) item;
     }
-
+    /**
+     * @add - the method changes the array element at the given index
+     * @param - Object item (element for adding), int index (index of element)
+     * @return - void (updated array)
+     */
     @Override
     public void add(Object item, int index) {
         if (size == arr.length){
