@@ -120,7 +120,11 @@ public class MyArrayList<T> implements MyArray{
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
-
+    /**
+     * @get - method finds the element by index
+     * @param - Integer number (index of element)
+     * @return - returns element by index
+     */
     @Override
     public Object get(int index) {
         return arr[index];
