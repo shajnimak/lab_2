@@ -160,8 +160,8 @@ public class MyArrayList<T> implements MyArray{
         return -1;
     }
     /**
-     * @indexOf - method finds the last index by element
-     * @return - returns index if element
+     * @sort - method for sorting array
+     * @return - void ( sorted array )
      */
     @Override
     public void sort() {
