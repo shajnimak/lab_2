@@ -98,7 +98,11 @@ public class MyArrayList<T> implements MyArray{
         remove(indexOf(item));
         return true;
     }
-
+    /**
+     * @remove - method finds the element by index and removes
+     * @param - Integer number (index of element)
+     * @return - returns an array without removed element
+     */
     @Override
     public Object remove(int index) {
         checkIndex(index);
