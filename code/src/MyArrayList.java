@@ -129,7 +129,11 @@ public class MyArrayList<T> implements MyArray{
     public Object get(int index) {
         return arr[index];
     }
-
+    /**
+     * @indexOf - method finds the first index by element
+     * @param - Object element
+     * @return - returns index if element
+     */
     @Override
     public int indexOf(Object o) {
         int index = -1;
