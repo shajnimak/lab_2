@@ -85,7 +85,11 @@ public class MyArrayList<T> implements MyArray{
         }
         arr[index] = (T) item;
     }
-
+    /**
+     * @remove - method finds the index of the element and removes
+     * @param - Object item (element for remove)
+     * @return - return true/false: true if success removing
+     */
     @Override
     public boolean remove(Object item) {
         if (!contains(item)){
