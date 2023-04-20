@@ -112,6 +112,10 @@ public class MyArrayList<T> implements MyArray{
         size--;
         return arr;
     }
+    /**
+     * @clear - creates a new array, and the old one is removed from memory
+     * @return - returns new array
+     */
     public void clear(){
         this.arr = (T[]) new Object[5];
         this.size = 0;
